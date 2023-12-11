@@ -1,0 +1,14 @@
+name: ibis-connect
+version: '3.9'
+
+services:
+  vscode:
+    build: 
+      dockerfile: vscode.Dockerfile
+      context: .
+    user: root
+    ports:
+      - "3000:3000"
+    volumes:
+      - ..:/home/ibis-connect
+
